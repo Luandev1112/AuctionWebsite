@@ -1,0 +1,336 @@
+.menu {
+    @extend %flex;
+    font-family: $heading;
+    font-weight: 500;
+    li {
+        padding: 0;
+        a {
+            font-size: 16px;
+            padding: 5px 15px;
+            color: $white-color;
+        }
+        @include breakpoint(lg) {
+            .cmn--btn {
+                &:hover {
+                    background: $white-color;
+                }
+            }
+            .submenu {
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 0;
+                min-width: 220px;
+                background: $white-color;
+                @include transition($transition);
+                opacity: 0;
+                visibility: hidden;
+                border-bottom: none;
+                li {
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px 20px 5px;
+                        border-bottom: 1px solid rgba($color:$dark-color, $alpha:.1);
+                        font-weight: 700;
+                        color: $dark-color;
+                    }
+                    .submenu {
+                        left: 100%;
+                        top: 10px;
+                    }
+                    &:hover>.submenu {
+                        top: 0;
+                    }
+                    &:hover >a {
+                        background: $body-bg;
+                        color: $white-color;
+                        padding-left: 22px;
+                    }
+                }
+            }
+            &:hover {
+                >.submenu {
+                    top: 100%;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            &:last-child {
+                >a:not(.cmn--btn) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-lg) {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        background: $primary-bg-2;
+        overflow: auto;
+        max-height: calc(100vh - 100px);
+        @include transition($transition);
+        @include transform(scaleY(0));
+        transform-origin: top;
+        display: block;
+        &.active {
+            @include transform(scaleY(1));
+        }
+        li {
+            padding: 0;
+            border-bottom: 1px solid transparent;
+            &.open {
+                ul {
+                    li {
+                        &:last-child {
+                            border-color: rgba($color:$white-color, $alpha:.1);
+                        }
+                    }
+                }
+            }
+            a {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid rgba($color:$white-color, $alpha:.1);
+                padding: 5px 20px;
+                font-size: 16px;
+            }
+            &:last-child {
+                >a {
+                    border: none;
+                }
+            }
+            .submenu {
+                padding-left: 20px;
+                display: none;
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .custom-button {
+                border: 1px solid rgba($color:$title-color, $alpha:.09) !important;
+                font-size: 14px;
+                line-height: 40px;
+                justify-content: center;
+            }
+        }
+        .cmn--btn {
+            margin: 15px 5px;
+            display: inline-flex;
+        }
+    }
+    @include breakpoint(lg) {
+        margin-left: auto;
+    }
+}
+.menu-item-has-children {
+    position: relative;
+    z-index: 999 !important;
+    >a {
+        align-items: center;
+        &::after {
+            content: "\f107";
+            font-weight: 700;
+            font-family: "Line Awesome Free";
+            margin-left: 5px;
+        }
+    }
+    @include breakpoint(lg) {
+        &.open {
+            .submenu {
+                display: block !important;
+            }
+        }
+        .submenu {
+            display: block !important;
+        }
+    }
+}
+.header-bar {
+    position: relative;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    @include breakpoint(sm) {
+        margin-right: 20px;
+    }
+    @include breakpoint(lg) {
+        display: none;
+    }
+    span {
+        position: absolute;
+        display: inline-block;
+        height: 3px;
+        width: 100%;
+        @include transition($transition);
+        background-color: $white-color;
+        left: 0;
+        &:first-child {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 52%;
+            transform: translateY(-65%);
+        }
+        &:last-child {
+            bottom: 0;
+        }
+    }
+    &.active {
+        span {
+            &:first-child {
+                @include transform(rotate(45deg) translate(3px, 9px));
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:last-child {
+                @include transform(rotate(-45deg)translate(3px, -9px));
+            }
+        }
+    }
+    @include breakpoint(max-sm) {
+        margin-right: 15px;
+        width: 15px;
+        height: 16px;
+        span {
+            height: 2px;
+            width: 20px;
+        }
+        &.active {
+            span {
+                &:first-child {
+                    @include transform(rotate(45deg) translate(4px, 6px));
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    @include transform(rotate(-45deg)translate(4px, -6px));
+                }
+            }
+        }
+    }
+}
+.header-top {
+    background: $body-bg;
+}
+.header-bottom {
+    @include transition($transition);
+    padding-top: 17px;
+    padding-bottom: 17px;
+    background: rgba($color:$white-color, $alpha:.04);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    &.active {
+        background: $section-bg;
+        background: $primary-bg;
+    }
+}
+.header-top-item {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    i {
+        color: $base-color;
+        font-size: 20px;
+        line-height: 16px;
+        display: flex;
+    }
+    a {
+        color: $white-color;
+        display: flex;
+        align-items: center;
+        i {
+            margin-right: 5px;
+        }
+    }
+    font-size: 15px;
+    line-height: 16px;
+    
+}
+.header-top-wrapper {
+    @include breakpoint(max-sm) {
+        justify-content: center !important;
+        .header-top-item, .bitcoin--price {
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+}
+.social-icon {
+    @extend %flex;
+    margin: 0 -8px 0 10px;
+    li {
+        padding: 0;
+        a {
+            padding: 3px 8px;
+            color: $white-color;
+        }
+    }
+}
+@media screen and (max-width:480px) {
+    .meta-list {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        a {
+            justify-content: center;
+        }
+    }
+}
+.header-wrapper {
+    align-items: center;
+    .logo {
+        width: 170px;
+        height: 50px;
+        @media screen and (max-width:500px) {
+            width: 150px;
+        }
+        a {
+            display: block;
+        }
+        img {
+            width: 100%;
+            height: 50px;
+            object-fit: contain;
+            object-position: left center;
+        }
+    }
+    .select-bar {
+        height: 34px;
+        padding-left: 5px;
+        padding-right: 5px;
+        outline: none;
+        margin-left: 20px;
+        border: 1px solid rgba($color:$white-color, $alpha:.1);
+        background: transparent;
+        color: $white-color;
+        @include border-radius(3px);
+        option {
+            color: $dark-color;
+        }
+        @include breakpoint(max-sm) {
+            font-size: 14px;
+        }
+    }
+}
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba($color:$dark-color, $alpha:.8);
+    visibility: hidden;
+    opacity: 0;
+    @include transition($transition);
+    z-index: 99;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}

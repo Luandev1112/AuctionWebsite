@@ -1,0 +1,26 @@
+.btn:focus{
+	outline:none;
+  	box-shadow:none;
+}
+.btn-primary{
+  	background-color: #000 !important;
+  	border:none;
+}
+.btn-danger {
+    color: #fff !important;
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+.support-btn{
+	height: 39px;
+}
+.support-input-group{
+    margin-top: 15px;
+}
+.error{
+	color: #dc3545;
+}
+.input-group label.error{
+    top: 100%;
+	position: absolute;
+}

@@ -1,0 +1,14 @@
+/core/node_modules
+/core/public/hot
+/core/public/storage
+/core/storage/*.key
+/core/vendor
+/core.env
+/core.env.backup
+/core.phpunit.result.cache
+/coredocker-compose.override.yml
+/coreHomestead.json
+/coreHomestead.yaml
+/corenpm-debug.log
+/core/yarn-error.log
+database.sql

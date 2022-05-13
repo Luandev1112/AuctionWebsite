@@ -1,0 +1,148 @@
+{
+    "banner": {
+        "builder": true,
+        "no_selection":true,
+        "name": "Banner Section",
+        "element": {
+            "images":{
+                "banner_image":{
+                    "size":"720x506"
+                }
+            },
+            "heading": "text",
+            "sub_heading": "text",
+            "description": "textarea",
+            "btn_name": "text",
+            "btn_url":"text",
+            "modal": false
+        }
+    },
+    "client": {
+        "builder": true,
+        "name": "Client Section",
+        "content": {
+            "images":{
+                "client_image":{
+                    "size":"600x600"
+                }
+            }
+        },
+        "element": {
+            "testimonial": "textarea",
+            "name": "text",
+            "modal": true
+        }
+    },
+    "how_to_work": {
+        "builder": true,
+        "name": "How to work",
+        "content": {
+            "heading": "text",
+            "sub_heading": "text"
+        },
+        "element": {
+            "title": "text",
+            "sub_title": "textarea",
+            "work_icon": "icon",
+            "modal": true
+        }
+    },
+     "counter": {
+        "builder": true,
+        "name": "Counter Section",
+        "content": {
+            "title": "text",
+            "heading": "text",
+            "sub_heading": "text"
+        },
+        "element": {
+            "counter_digit": "text",
+            "title": "text",
+            "counter_icon": "icon",
+            "modal": true
+        }
+    },
+    "ending_soon_product": {
+        "builder": false,
+        "name": "Ending Product Section"
+    },
+    "featured_product": {
+        "builder": false,
+        "name": "Featured Section"
+    },
+    "latest_product": {
+        "builder": false,
+        "name": "Latest Product Section"
+    },
+    "today_deal_product": {
+        "builder": false,
+        "name": "Today Deal Product Section"
+    },
+     "partner": {
+        "builder": true,
+        "name": "Partner Section",
+        "content": {
+            "title": "text",
+            "heading": "text",
+            "sub_heading": "text",
+            "description": "textarea-nic"
+        },
+        "element": {
+            "images":{
+                "patrner_image":{
+                    "size":"300x49"
+                }
+            },
+            "modal": true
+        }
+    },
+    "policy_pages": {
+        "builder": true,
+        "no_selection":true,
+        "name": "Policy Pages",
+        "element": {
+            "title": "text",
+            "details": "textarea-nic",
+            "modal": false
+        }
+    },
+    "blog": {
+        "builder": true,
+        "name": "Blog Section",
+        "element": {
+            "images":{
+                "blog_image":{
+                    "size":"900x600"
+                }
+            },
+            "title": "text",
+            "description": "textarea-nic",
+            "modal": false
+        }
+    }, 
+    "social_icon": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Social Icons",
+        "element": {
+            "title": "text",
+            "social_icon": "icon",
+            "url": "text",
+            "modal": true
+        }
+    },
+    "contact_us": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Contact Us",
+        "content": {
+            "title": "text",
+            "short_details": "text",
+            "email_address": "text",
+            "contact_details": "text",
+            "contact_number": "text",
+            "latitude": "text",
+            "longitude": "text"
+        }
+    }
+}

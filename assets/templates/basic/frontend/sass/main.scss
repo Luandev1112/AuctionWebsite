@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Josefin+Sans:wght@400;500;700&display=swap');
+
+@import '_abstracts/_mixins';
+@import '_abstracts/_variables';
+@import '_base/_global';
+@import '_base/_typography';
+@import '_base/_about';
+@import '_base/color_control';
+@import '_layout/_footer';
+@import '_layout/_forms';
+@import '_layout/_header';
+@import '_layout/_banner';
+@import '_layout/_sidebar';
+@import '_layout/_section';
+@import '_layout/_animation';
+@import '_layout/_blog';
+@import '_components/_buttons';
+
+.menu {
+    >li {
+        &:nth-last-of-type(1), &:nth-last-of-type(2) {
+            .submenu {
+                left: unset;
+                right: 0;
+            }
+        }
+    }
+}
+.pagination {
+    margin: -3px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .page-item {
+        text-align: center;
+        padding: 3px;
+
+        a,
+        span {
+            width: 40px;
+            height: 40px;
+            @include border-radius(3px);
+            background: rgba($color:$white-color, $alpha:.1);
+            color: $title-color;
+            padding: 0;
+            line-height: 40px;
+            display: block;
+            margin: 0;
+            border: 1px solid rgba($color:$title-color, $alpha:.2);
+            background: $section-bg;
+            &.active {
+                background: $base-color;
+            }
+        }
+        span {
+            border: none;
+        }
+
+
+        &.active,
+        &:hover {
+
+            span,
+            a {
+                background: $base-color;
+                color: $white-color;
+                border-color: rgba($color:$title-color, $alpha:.2);
+            }
+        }
+
+        &.disabled {
+            span {
+                background: rgba($color:$base-color, $alpha:.3);
+                border: none;
+                color: $white-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+.bg--body {
+    background-color: $body-bg !important;
+}
+.bg--section {
+    background-color: $section-bg !important;
+}
+
+.btn--base,
+.badge--base,
+.bg--base {
+    background-color: $base-color !important;
+}
+.btn--primary,
+.badge--primary,
+.bg--primary {
+    background-color: $primary-color !important;
+}
+.btn--secondary 
+.badge--secondary 
+.bg--secondary {
+    background-color: $secondary-color !important;
+}
+
+.btn--success,
+.badge--success,
+.bg--success {
+    background-color: $success-color !important;
+}
+
+.btn--danger,
+.badge--danger,
+.bg--danger {
+    background-color: $danger-color !important;
+}
+
+.btn--warning,
+.badge--warning,
+.bg--warning {
+    background-color: $warning-color !important;
+}
+.btn--warning {
+    color: $dark-color !important;
+}
+.btn--info,
+.badge--info,
+.bg--info {
+    background-color: $info-color !important;
+}
+.btn--dark,
+.badge--dark,
+.bg--dark {
+    background-color: $dark-color !important;
+}
+.btn--white,
+.badge--white,
+.bg--white {
+    background-color: $white-color !important;
+}
+[class*="btn--"] {
+    color: $white-color;
+    font-weight: 500;
+    &:hover {
+        color: $white-color;
+    }
+}
+.btn--warning,
+.badge--warning,
+.btn--white,
+.badge--white {
+    color: $title-color;
+    &:hover {
+        color: $title-color;
+    }
+}
+.btn--black,
+.badge--black,
+.bg--black {
+    background-color: $black-color !important;
+}
+.btn--title,
+.badge--title,
+.bg--title {
+    background-color: $title-color !important;
+}
+.btn--1,
+.badge--1,
+.bg--1 {
+    background-color: $theme-one !important;
+}
+
+.text--primary {
+    color: $primary-color !important;
+}
+.text--secondary {
+    color: $secondary-color !important;
+}
+
+.text--success {
+    color: $success-color !important;
+}
+
+.text--danger {
+    color: $danger-color !important;
+}
+
+.text--warning {
+    color: $warning-color !important;
+}
+
+.text--info {
+    color: $info-color !important;
+}
+
+.text--dark {
+    color: $dark-color !important;
+}
+
+.text--white {
+    color: $white-color !important;
+    p, ul li, ul li a, span {
+        color: $light-color;
+    }
+}
+
+.text--black {
+    color: $black-color !important;
+}
+
+.text--body {
+    color: $body-color !important;
+}
+
+.text--base {
+    color: $base-color !important;
+}
+
+.text--title {
+    color: $title-color !important;
+}
+.text--1 {
+    color: $theme-one !important;
+}
+.bg--transparent {
+    background-color: transparent !important;
+}
+.bg--none {
+    background: none !important;
+}
+.text--star {
+    color: $star;
+}

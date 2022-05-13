@@ -1,0 +1,143 @@
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: $body-color;
+    line-height: 1.4;
+    overflow-x: hidden;
+    font-family: $body;
+    background: $body-bg;
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    color: $title-color;
+    font-family: $heading;
+    a {
+        color: $title-color;
+        &:hover {
+            color: $base-color;
+        }
+    }
+}
+h1 {
+    font-size: 42px;
+}
+h2 {
+    font-size: 36px;
+    line-height: 46px;
+    margin-top: -16px;
+}
+h3 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-top: -14px;
+}
+h4 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: -9px;
+}
+h5 {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: -9px;
+    font-weight: 600;
+}
+h6 {
+    font-size: 18px;
+    margin-top: -7px;
+    font-weight: 500;
+}
+p {
+    margin-top: -12px;
+    &:last-child {
+        margin-bottom: -7px !important;
+    }
+    a {
+        color: $base-color;
+        &:hover {
+            color: $base-color;
+        }
+    }
+    @include breakpoint(max-sm) {
+        font-size: 16px;
+    }
+}
+
+@include breakpoint (md) {
+    h1 {
+        font-size: 80px;
+    }
+    h2 {
+        font-size: 54px;
+        line-height: 64px;
+        margin-top: -20px;
+    }
+    h3 {
+        font-size: 36px;
+        line-height: 46px;
+        margin-top: -16px;
+    }
+    h4 {
+        font-size: 28px;
+        line-height: 38px;
+        margin-top: -14px;
+    }
+    h5 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: -9px;
+    }
+    h6 {
+        font-size: 20px;
+        line-height: 26px;
+        margin-top: -9px;
+    }
+}
+a {
+    display: inline-block;
+    @include transition($transition);
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+        padding: 5px 0;
+    }
+}
+.bg_img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.right_center {background-position: right center;}
+.left_center {background-position: left center;}
+.bottom_center {background-position: bottom center;}
+.bottom_left {background-position: bottom left;}
+.bottom_right {background-position: bottom right;}
+.top_center {background-position: top center;}
+.top_left {background-position: top left;}
+.top_right {background-position: top right;}
+.bg_contain {background-size: contain}
+.bg_fixed {
+    background-attachment: fixed;
+}

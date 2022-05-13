@@ -1,0 +1,87 @@
+
+.preloader {
+    width: 100%;
+    height: 100%;
+    background: $section-bg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    text-align: center;
+    .hello {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .wellcome {
+        text-transform: uppercase;
+        span {
+            display: block;
+            margin-top: 10px;
+            color: $base-color;
+        }
+    }
+}
+
+.loader-frame {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    @extend %center;
+    @extend %flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    background-color: white 0%;
+    border: 1px solid $white-color;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+.loader1 {
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    border-top: 5px solid $white-color;
+    border-bottom: 5px solid $white-color;
+    animation: clockwisespin 5s linear 3;
+}
+@keyframes clockwisespin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
